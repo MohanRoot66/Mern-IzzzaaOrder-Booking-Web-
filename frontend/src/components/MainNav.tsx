@@ -6,6 +6,7 @@ const MainNav = () => {
 
   const {loginWithRedirect,isAuthenticated} = useAuth0();
 
+
   return(
     <span>
       { isAuthenticated ? (<UserNameMenu />) : 
