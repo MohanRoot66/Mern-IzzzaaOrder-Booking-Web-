@@ -9,6 +9,9 @@ const AuthProvider = ({children}: Props) => {
     const domain = import.meta.env.VITE_AUTH0_DOMAIN;
     const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
     const redirectUri = import.meta.env.VITE_AUTH0_CALLBACK_URL;
+    const audience = "MernFoodOrdering_API"
+
+    console.log("aud",audience);
 
     const navigate = useNavigate();
 
@@ -27,6 +30,7 @@ const AuthProvider = ({children}: Props) => {
             authorizationParams={
                 {
                     redirect_uri : redirectUri,
+                    audience,
                 }
             }
             onRedirectCallback={onRedirectCallback}
