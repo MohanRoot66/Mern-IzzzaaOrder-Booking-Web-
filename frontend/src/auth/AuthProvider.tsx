@@ -11,7 +11,6 @@ const AuthProvider = ({children}: Props) => {
     const redirectUri = import.meta.env.VITE_AUTH0_CALLBACK_URL;
     const audience = "MernFoodOrdering_API"
 
-    console.log("aud",audience);
 
     const navigate = useNavigate();
 
